@@ -4,12 +4,12 @@ on:
     - main
 jobs:
   main:
-      name: Setup nginx
-      uses: cuchi/jinja2-action@v1.3.0
-      with:
-        template: infra/nginx.conf.j2
-        output_file: infra/nginx.conf
-        strict: true
-        variables: |
-          server_host=staging.example.com
-          timeout=30s
+    runs-on: ubuntu-latest
+    steps:
+      - name: Jinja2 Templating
+      # You may pin to the exact commit or the version.
+      # uses: jayamanikharyono/jinja-action@d7419da1ff681b86ea8ae64ac82d70d229e6f3d4
+        uses: jayamanikharyono/jinja-action@v1.1
+        with:
+          path: template/*.html
+          
