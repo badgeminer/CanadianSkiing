@@ -10,10 +10,9 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: fletort/jinja2-template-action@cee4fb7f250dab558dbbb5c527931bf9d6095380
         uses: fletort/jinja2-template-action@v1.2.0
+        env:
+          EXIST: true
         with:
-          # Key, value pairs in .env file format (key=value)
-          variables: 
-            exists: true
           # Put to `true` to keep original template file.
           keep_template: true
           
