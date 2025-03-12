@@ -12,4 +12,5 @@ jobs:
         uses: jayamanikharyono/jinja-action@v1.1
         with:
           path: template/*.html
+          data: repo_name=${{ github.event.repository.name }}
           
